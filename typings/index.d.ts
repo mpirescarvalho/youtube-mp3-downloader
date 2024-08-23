@@ -1,3 +1,5 @@
+import ytdl from "@distube/ytdl-core";
+
 declare module YoutubeMp3Downloader {
   export interface IYoutubeMp3DownloaderOptions {
     ffmpegPath?: string;
@@ -8,6 +10,7 @@ declare module YoutubeMp3Downloader {
     progressTimeout: number;
     allowWebm?: boolean;
     requestOptions?: {};
+    agent: ytdl.Agent;
   }
 
   export interface IResultObject {
